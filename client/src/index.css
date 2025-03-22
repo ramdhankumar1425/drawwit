@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Monomaniac+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+    --font-monomaniac: "Monomaniac One", cursive, sans-serif;
+    --font-roboto: "Roboto", sans-serif;
+}
+
+@custom-variant dark (&:where(.dark,.dark *));
+
+* {
+    @apply transition-colors duration-75;
+}
+
+.theme-toggle-icon {
+    transition: all 0.3s !important;
+}
+
+/* Custom cursor for canvas */
+/* body {
+    cursor: url("/cursors/default.png"), auto;
+} */
