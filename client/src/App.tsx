@@ -6,7 +6,7 @@ import PropsPanel from "./components/PropsPanel";
 import Zoom from "./components/Zoom";
 import User from "./components/User";
 import { AuthProvider } from "./context/AuthProvider";
-import AIPromptBox from "./components/AIPromptBox";
+// import AIPromptBox from "./components/AIPromptBox";
 import UndoRedo from "./components/UndoRedo";
 import { CollabProvider } from "./context/CollabProvider";
 import CollabCursors from "./components/CollabCursors";

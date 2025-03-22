@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 
-const MAX_HEIGHT = 200;
+// const MAX_HEIGHT = 200;
 
 const AIPromptBox: React.FC = () => {
     const textareaRef = useRef<HTMLTextAreaElement | null>(null);

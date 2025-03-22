@@ -29,8 +29,8 @@ interface AuthProviderProps {
 }
 
 export const AuthProvider = ({ children }: AuthProviderProps) => {
-    const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
-    const [user, setUser] = useState<User | null>({
+    const [isAuthenticated, _setIsAuthenticated] = useState<boolean>(false);
+    const [user, _setUser] = useState<User | null>({
         created_at: "2024-12-18T05:49:14.002Z",
         email: "ramdhankumar1425@gmail.com",
         email_verified: true,

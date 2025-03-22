@@ -38,14 +38,14 @@ interface CollabProviderProps {
 
 export const CollabProvider = ({ children }: CollabProviderProps) => {
     const [isCollaboration, setIsCollaboration] = useState<boolean>(false); // is collaboration ON/OFF
-    const [canvasState, setCanvasState] = useState<JSON | null>(null); // JSON object of synced canvas
-    const [collaborators, setCollaborators] = useState<Collaborator[]>([]); // list of all the collaborators
+    const [canvasState, _setCanvasState] = useState<JSON | null>(null); // JSON object of synced canvas
+    const [collaborators, _setCollaborators] = useState<Collaborator[]>([]); // list of all the collaborators
 
     const { initSocket, socket, emitSocketEvent } = useSocket();
 
-    const handleStartCollaboration = useCallback(async (currCanvasState) => {
+    const handleStartCollaboration = useCallback(async (currCanvasState:JSON) => {
         try {
-            const response = await emitSocketEvent(
+            await emitSocketEvent(
                 SOCKET_EVENTS.START_COLLABORATION,
                 {
                     currCanvasState,

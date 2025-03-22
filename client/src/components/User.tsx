@@ -1,8 +1,8 @@
-import { useState } from "react";
+import React,{ useState } from "react";
 import { useAuth } from "../context/AuthProvider";
 import { CircleHelp, LogIn, LogOut, Settings, UserRound } from "lucide-react";
 
-const User = () => {
+const User:React.FC = () => {
     const { isAuthenticated, user } = useAuth();
     const [active, setActive] = useState<boolean>(false);
 
